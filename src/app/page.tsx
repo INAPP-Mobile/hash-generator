@@ -512,6 +512,8 @@ export default function Home() {
         </div>
       </div>
 
+      <ContentSection />
+
       <Script
         async
         src="https://www.googletagmanager.com/gtag/js?id=AW-971442831"
@@ -536,4 +538,29 @@ export default function Home() {
       />
     </main>
   );
+}
+
+function ContentSection() {
+  return (
+    <section className="max-w-3xl mx-auto mt-16 space-y-8 text-gray-300 text-sm leading-relaxed">
+      <div className="bg-gray-800/50 border border-gray-700/50 rounded-xl p-6 space-y-4">
+        <h2 className="text-lg font-semibold text-white">About This Tool</h2>
+        <p>Generate MD5, SHA-1, SHA-256, and SHA-512 hashes instantly. Compare text against a known hash to verify integrity, with file upload support.</p>
+        <h3 className="text-base font-semibold text-white">Common Use Cases</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>Verifying file integrity after downloads</li>
+          <li>Hashing passwords for local development and testing</li>
+          <li>Checking if two inputs produce the same hash output</li>
+        </ul>
+        <h3 className="text-base font-semibold text-white">Pro Tips</h3>
+        <ul className="list-disc pl-5 space-y-1">
+          <li>SHA-256 is the recommended hash for most security purposes</li>
+          <li>MD5 and SHA-1 are considered cryptographically broken — avoid for security-critical use</li>
+        </ul>
+        <p className="text-gray-400 text-xs mt-4">
+          Need a unique identifier? Try the <a href="https://uuid.freeq.one" className="text-blue-400 hover:underline">UUID Generator</a>. Part of the <a href="https://freeq.one" className="text-blue-400 hover:underline">FreeQ.One</a> tools suite.
+        </p>
+      </div>
+    </section>
+  )
 }
